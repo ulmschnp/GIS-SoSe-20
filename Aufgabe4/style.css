@@ -1,0 +1,226 @@
+
+/* -------- HANDY PAGE ------- */
+
+@media screen and (max-width: 700px){          
+#search{
+    float: right;
+}
+
+.head{
+    float: bottom;
+    font-size: 30px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color:yellow;  /* handy göße funktioniert nicht, gerne feedback warum, hab jetzt schon einiges ausprobiert */
+}
+
+.Logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Logo + img {
+    width: 300px;
+    height: 300px;
+    margin-bottom: 40px;
+
+}
+#fieldset{
+    background-color:black;
+    margin-bottom: 40px;
+}
+.zuweisung{
+    font-size: x-large;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    height: 50px;
+    margin-bottom: 0px;
+}
+
+.zuweisung p{
+    float: left;
+    margin-left: 10px;
+}
+
+div #Schuhe {
+    background-color: seashell;
+}
+
+#fieldset1{
+    background-color: seashell;
+    margin-top: 27px;
+}
+
+#einkauf{
+    width: 50px;
+    height: 50px;
+
+}
+
+.box{
+    width: 200px;
+    height: 200px;
+    float: left;
+    margin-left: 300px;
+    margin-bottom: 100px;
+    background-color:whitesmoke;
+}
+
+.box img {
+    width: 100px;
+    height: 100px;
+}
+
+
+}
+
+
+/* -------- TABLET VERSION -------- */
+
+@media screen and (max-width: 1024px) {
+
+    #search{
+        float: right;
+    }
+    
+    .head{
+        float: bottom;
+        font-size: 30px;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        color: white;
+    }
+    
+    .Logo{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .Logo img {
+        width: 300px;
+        height: 300px;
+        margin-bottom: 40px;
+    
+    }
+    #fieldset{
+        background-color:black;
+        margin-bottom: 40px;
+    }
+    .zuweisung{
+        font-size: x-large;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        height: 50px;
+        margin-bottom: 0px;
+    }
+    
+    .zuweisung p{
+        float: left;
+        margin-left: 10px;
+    }
+    
+    #Schuhe {
+        background-color: seashell;
+    }
+    
+    #fieldset1{
+        background-color:seashell;
+        margin-top: 27px;
+    }
+    
+    #einkauf{
+        width: 50px;
+        height: 50px;
+    
+    }
+    
+    .box{
+        width: 200px;
+        height: 200px;
+        float: left;
+        margin-left: 20px;                  /* geändert */
+        margin-bottom: 100px;
+        background-color:whitesmoke;
+    }
+    
+    .box img {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+
+
+
+
+/* ----- DESKTOP PAGE ------- */
+
+@media screen and (min-width: 1024px ) {
+
+#search{
+    float: right;
+}
+
+.head{
+    float: bottom;
+    font-size: 30px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: white;
+}
+
+.Logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Logo img {
+    width: 300px;
+    height: 300px;
+    margin-bottom: 40px;
+
+}
+#fieldset{
+    background-color:black;
+    margin-bottom: 40px;
+}
+.zuweisung{
+    font-size: x-large;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    height: 50px;
+    margin-bottom: 0px;
+}
+
+.zuweisung p{
+    float: left;
+    margin-left: 10px;
+}
+
+#Schuhe {
+    background-color: seashell;
+}
+
+#fieldset1{
+    background-color:seashell;
+    margin-top: 27px;
+}
+
+#einkauf{
+    width: 50px;
+    height: 50px;
+
+}
+
+.box{
+    width: 200px;
+    height: 200px;
+    float: left;
+    margin-left: 300px ;
+    margin-bottom: 100px;
+    background-color: seashell;
+}
+
+.box img {
+    width: 100px;
+    height: 100px;
+}
+
+}
