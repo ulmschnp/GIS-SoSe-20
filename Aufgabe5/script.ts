@@ -92,6 +92,8 @@ let stoneisland: Special = {
     preis: "238,00€"
 };
 
+
+
 interface SpecialShoes {
         ueberschrift: string;
         bild: string;
@@ -187,17 +189,20 @@ let nSup: SpecialShoes = {
     };
     
 
+
+
+
+
 let specialedition: Special[] = [luiSupJacke, luisupbag, phillipPlainJacket, phillipplainhose, 
         phillipPlainWeste, gcs, offWhite, gucciCap, offWhitePulli, gucciLO, stoneIslandhoddy, stoneisland];
 
-
-
 let shoes: SpecialShoes[] = [nike90offwhite, offWhiteS, airJordanBLUEBLACK, nikebacktofuture, 
-        nikebj, airMAG, bts, btsw, offWhitePulli, yeezyBoost, yeezy, ys, nSup];
-
-
-
+            nikebj, airMAG, bts, btsw, yeezyBoost, yeezy, ys, nSup];
     
+  
+            
+
+
 for (let zahl: number = 0; zahl < specialedition.length; zahl++) {
     
     let nDiv: HTMLDivElement = document.createElement("div");
@@ -229,32 +234,35 @@ for (let zahl: number = 0; zahl < specialedition.length; zahl++) {
     einkaufen.innerHTML = "Einkaufswagen";
     document.getElementById("Special" + zahl)?.appendChild(einkaufen);
 }
+
 // ---------------------------for--------------------------------------------------------
+
+
 for (let zahl: number = 0; zahl < shoes.length; zahl++) {
     
     let nDiv: HTMLDivElement = document.createElement("div");
-    nDiv.id = "Special" + zahl;
+    nDiv.id = "SpecialShoes" + zahl;
     nDiv.setAttribute("class", "box");
     document.getElementById("Kategorie2")?.appendChild(nDiv);
 
    
     let headline: HTMLParagraphElement = document.createElement("p");    //Name
-    headline.innerHTML = specialedition[zahl].ueberschrift;
+    headline.innerHTML = shoes[zahl].ueberschrift;
     document.getElementById("SpecialShoes" + zahl)?.appendChild(headline);
 
    
     let img: HTMLImageElement = document.createElement("img");    //bild
-    img.src = specialedition[zahl].bild;
+    img.src = shoes[zahl].bild;
     document.getElementById("SpecialShoes" + zahl)?.appendChild(img);
 
    
     let content: HTMLParagraphElement = document.createElement("p");   //Beschreibung
-    content.innerHTML = specialedition[zahl].beschreibung;
+    content.innerHTML = shoes[zahl].beschreibung;
     document.getElementById("SpecialShoes" + zahl)?.appendChild(content);
 
     
     let price: HTMLParagraphElement = document.createElement("p");   //Preis
-    price.innerHTML = specialedition[zahl].preis;
+    price.innerHTML = shoes[zahl].preis;
     document.getElementById("SpecialShoes" + zahl)?.appendChild(price);
 
    

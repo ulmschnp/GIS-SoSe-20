@@ -146,7 +146,7 @@ let nSup = {
 let specialedition = [luiSupJacke, luisupbag, phillipPlainJacket, phillipplainhose,
     phillipPlainWeste, gcs, offWhite, gucciCap, offWhitePulli, gucciLO, stoneIslandhoddy, stoneisland];
 let shoes = [nike90offwhite, offWhiteS, airJordanBLUEBLACK, nikebacktofuture,
-    nikebj, airMAG, bts, btsw, offWhitePulli, yeezyBoost, yeezy, ys, nSup];
+    nikebj, airMAG, bts, btsw, yeezyBoost, yeezy, ys, nSup];
 for (let zahl = 0; zahl < specialedition.length; zahl++) {
     let nDiv = document.createElement("div");
     nDiv.id = "Special" + zahl;
@@ -171,20 +171,20 @@ for (let zahl = 0; zahl < specialedition.length; zahl++) {
 // ---------------------------for--------------------------------------------------------
 for (let zahl = 0; zahl < shoes.length; zahl++) {
     let nDiv = document.createElement("div");
-    nDiv.id = "Special" + zahl;
+    nDiv.id = "SpecialShoes" + zahl;
     nDiv.setAttribute("class", "box");
     document.getElementById("Kategorie2")?.appendChild(nDiv);
     let headline = document.createElement("p"); //Name
-    headline.innerHTML = specialedition[zahl].ueberschrift;
+    headline.innerHTML = shoes[zahl].ueberschrift;
     document.getElementById("SpecialShoes" + zahl)?.appendChild(headline);
     let img = document.createElement("img"); //bild
-    img.src = specialedition[zahl].bild;
+    img.src = shoes[zahl].bild;
     document.getElementById("SpecialShoes" + zahl)?.appendChild(img);
     let content = document.createElement("p"); //Beschreibung
-    content.innerHTML = specialedition[zahl].beschreibung;
+    content.innerHTML = shoes[zahl].beschreibung;
     document.getElementById("SpecialShoes" + zahl)?.appendChild(content);
     let price = document.createElement("p"); //Preis
-    price.innerHTML = specialedition[zahl].preis;
+    price.innerHTML = shoes[zahl].preis;
     document.getElementById("SpecialShoes" + zahl)?.appendChild(price);
     let kaufen = document.createElement("button"); //Einkaufswagen
     kaufen.innerHTML = "Einkaufswagen";
