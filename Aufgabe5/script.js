@@ -71,8 +71,6 @@ let stoneisland = {
     beschreibung: "Gönn Dir!",
     preis: "238,00€"
 };
-let specialedition = [luiSupJacke, luisupbag, phillipPlainJacket, phillipplainhose,
-    phillipPlainWeste, gcs, offWhite, gucciCap, offWhitePulli, gucciLO, stoneIslandhoddy, stoneisland];
 let nike90offwhite = {
     ueberschrift: "Nike 90 OffWhite BLACK",
     bild: "offwhiot90.jpg",
@@ -145,6 +143,8 @@ let nSup = {
     beschreibung: "Hast du Ihn schon?",
     preis: "5676,99€"
 };
+let specialedition = [luiSupJacke, luisupbag, phillipPlainJacket, phillipplainhose,
+    phillipPlainWeste, gcs, offWhite, gucciCap, offWhitePulli, gucciLO, stoneIslandhoddy, stoneisland];
 let shoes = [nike90offwhite, offWhiteS, airJordanBLUEBLACK, nikebacktofuture,
     nikebj, airMAG, bts, btsw, offWhitePulli, yeezyBoost, yeezy, ys, nSup];
 for (let zahl = 0; zahl < specialedition.length; zahl++) {
@@ -152,50 +152,41 @@ for (let zahl = 0; zahl < specialedition.length; zahl++) {
     nDiv.id = "Special" + zahl;
     nDiv.setAttribute("class", "box");
     document.getElementById("Kategorie1")?.appendChild(nDiv);
-    //NAME
-    let headline = document.createElement("p");
+    let headline = document.createElement("p"); //Name
     headline.innerHTML = specialedition[zahl].ueberschrift;
     document.getElementById("Special" + zahl)?.appendChild(headline);
-    //IMG
-    let img = document.createElement("img");
+    let img = document.createElement("img"); //Bild
     img.src = specialedition[zahl].bild;
     document.getElementById("Special" + zahl)?.appendChild(img);
-    //DESCRIPTION
-    let content = document.createElement("p");
+    let content = document.createElement("p"); //Beschreib.
     content.innerHTML = specialedition[zahl].beschreibung;
     document.getElementById("Special" + zahl)?.appendChild(content);
-    //PREIS
-    let price = document.createElement("p");
+    let price = document.createElement("p"); //Preis
     price.innerHTML = specialedition[zahl].preis;
     document.getElementById("Special" + zahl)?.appendChild(price);
-    //BUY
-    let einkaufen = document.createElement("button");
+    let einkaufen = document.createElement("button"); //Kaufen
     einkaufen.innerHTML = "Einkaufswagen";
     document.getElementById("Special" + zahl)?.appendChild(einkaufen);
 }
+// ---------------------------for--------------------------------------------------------
 for (let zahl = 0; zahl < shoes.length; zahl++) {
     let nDiv = document.createElement("div");
     nDiv.id = "Special" + zahl;
     nDiv.setAttribute("class", "box");
     document.getElementById("Kategorie2")?.appendChild(nDiv);
-    //Name
-    let headline = document.createElement("p");
+    let headline = document.createElement("p"); //Name
     headline.innerHTML = specialedition[zahl].ueberschrift;
     document.getElementById("SpecialShoes" + zahl)?.appendChild(headline);
-    //bild
-    let img = document.createElement("img");
+    let img = document.createElement("img"); //bild
     img.src = specialedition[zahl].bild;
     document.getElementById("SpecialShoes" + zahl)?.appendChild(img);
-    //Beschreibung
-    let content = document.createElement("p");
+    let content = document.createElement("p"); //Beschreibung
     content.innerHTML = specialedition[zahl].beschreibung;
     document.getElementById("SpecialShoes" + zahl)?.appendChild(content);
-    //PREIS
-    let price = document.createElement("p");
+    let price = document.createElement("p"); //Preis
     price.innerHTML = specialedition[zahl].preis;
     document.getElementById("SpecialShoes" + zahl)?.appendChild(price);
-    //Einkaufswagen
-    let kaufen = document.createElement("button");
+    let kaufen = document.createElement("button"); //Einkaufswagen
     kaufen.innerHTML = "Einkaufswagen";
     document.getElementById("SpecialShoes" + zahl)?.appendChild(kaufen);
 }
