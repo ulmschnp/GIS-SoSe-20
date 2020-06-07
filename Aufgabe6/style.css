@@ -1,0 +1,164 @@
+body {
+    width:100%;
+    height: auto;
+}
+
+/*@media screen and (max-width: 700px){  */        
+#search{
+    float: right;
+}
+
+.headbox {
+    display:block;
+    background-color: black;
+    width: 100%;
+    height:20%;
+}
+
+
+.head{
+    width:100%;
+    font-size: 0%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color:yellow;  /* handy göße funktioniert nicht, gerne feedback warum, hab jetzt schon einiges ausprobiert */
+}
+
+.Logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Logo + img {
+    width: 10%;  /* % Angabe passt direkt an Bildschirmgröße an! */
+    height: 10%;
+    margin-bottom: 50%;
+
+}
+#fieldset{
+    display: block;
+    border:none;
+    background-color:black;
+    width:99%;
+    height:auto;
+}
+.zuweisung{
+    font-size: x-large;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    height: 5px;
+    margin-bottom: 0px;
+    text-align:center;
+
+}
+
+.zuweisung p{
+    margin: 10px;
+    padding: 10px;
+}
+
+
+
+
+
+#fieldset1{
+    background-color: seashell;
+    margin-top: 0px;
+}
+
+.btn-standard{
+    background-color: white;
+    border:none;
+    color:black;
+    padding: 10px 15px;
+    text-align:center;
+    text-decoration: none;
+    display:inline-block;
+    font-size: 16px;
+    margin: 2px 2px;
+    cursor:pointer;
+}
+
+
+
+.navigation {
+    background-color: black;
+    color:white;
+    border:none;
+    padding: 15px 25px;
+    text-align:center;
+    text-decoration:none;
+    display:inline-block;
+    font-size: 16px;
+    margin: 2px 30px;
+    cursor:pointer;
+}
+
+#einkauf{
+    width: 40px;
+    height: 40px;
+}
+
+
+
+#Kategorie1 {
+    display:grid;
+    grid-column-gap: 0px;
+    grid-template-columns: auto auto auto auto;
+    background-color: white;
+    align-items: center;
+    text-align: center;
+    padding: 0px;
+}
+
+#Kategorie2 {
+    display:grid;
+    grid-column-gap: 10px;
+    grid-template-columns: auto auto auto auto;
+    background-color: white;
+    align-items: center;
+    text-align: center;
+    padding: 0px;
+}
+
+.box{                            /* % Angabe passt direkt an Bildschirmgröße an! */
+    width: 80%;
+    height: 70%;
+    margin-bottom: 150px;
+    border-style:solid;
+    color:black;
+    border-color: black;
+    background-color: grey;
+}
+
+.box img {                  /* % Angabe passt direkt an Bildschirmgröße an! */
+    width: 50%;
+    height: auto;
+}
+
+.box button {
+    background-color: black;
+    color:white;
+    border:none;
+    padding: 15px 25px;
+    text-align:center;
+    text-decoration:none;
+    display:inline-block;
+    font-size: 16px;
+    margin: 20px;
+    cursor:pointer;
+}
+
+#Grenze1 {
+    width:100%;
+    height: 50px;
+    background-color: black;
+    margin-bottom: 30px;
+    margin-top: 50px;
+}
+
+
+
+
+
+
+
