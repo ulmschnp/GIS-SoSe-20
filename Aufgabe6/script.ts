@@ -1,6 +1,7 @@
 // intaface fürs erte Kategorie
 namespace namespace06 {
     interface Artikel {
+        
         bild: string;
         name: string;
         beschreibung: string;
@@ -229,7 +230,7 @@ namespace namespace06 {
         document.getElementById("Artikel" + index)?.appendChild(newH);
 
 
-        let bild: HTMLImgElement  = document.createElement("bild");     //Bild
+        let bild: HTMLImageElement  = document.createElement("img");     //Bild
         bild.src = artikel[index].bild;
         document.getElementById("Artikel" + index)?.appendChild(bild);
 
@@ -285,7 +286,7 @@ namespace namespace06 {
 
     // ersellung der navigation
     let newul: HTMLUListElement = document.createElement("ul");
-    document.getElementById("topmenu")?.appendChild(newul);
+    document.getElementById("zuweisung")?.appendChild(newul);
     for (let index: number = 0; index < kategorien.length + 1; index++) {
         let newli: HTMLLIElement = document.createElement("li");
         let newa: HTMLAnchorElement = document.createElement("a");

@@ -182,7 +182,7 @@ var namespace06;
         let newH = document.createElement("h2"); //Name
         newH.innerHTML = artikel[index].name;
         document.getElementById("Artikel" + index)?.appendChild(newH);
-        let bild = document.createElement("bild"); //Bild
+        let bild = document.createElement("img"); //Bild
         bild.src = artikel[index].bild;
         document.getElementById("Artikel" + index)?.appendChild(bild);
         let newP = document.createElement("p"); //Beschreib.
@@ -221,7 +221,7 @@ var namespace06;
     }
     // ersellung der navigation
     let newul = document.createElement("ul");
-    document.getElementById("topmenu")?.appendChild(newul);
+    document.getElementById("zuweisung")?.appendChild(newul);
     for (let index = 0; index < kategorien.length + 1; index++) {
         let newli = document.createElement("li");
         let newa = document.createElement("a");
