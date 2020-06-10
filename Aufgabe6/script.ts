@@ -229,8 +229,8 @@ namespace namespace06 {
         document.getElementById("Artikel" + index)?.appendChild(newH);
 
 
-        let newImg: <HTMLImgElement> (HTMLImgElement)  = document.createElement("Bild");     //Bild
-        newImg.src = artikel[index].bild;
+        let bild: HTMLImgElement  = document.createElement("bild");     //Bild
+        bild.src = artikel[index].bild;
         document.getElementById("Artikel" + index)?.appendChild(bild);
 
 
