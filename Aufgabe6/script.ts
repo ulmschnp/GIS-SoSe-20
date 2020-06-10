@@ -274,7 +274,7 @@ namespace namespace06 {
 
         //zusammenrechnen der presie 
         let test: string = (<HTMLDivElement>(<HTMLElement>_event.currentTarget).parentElement).getAttribute("id")!;
-        let test2: string[] = test.split("artikel");
+        let test2: string[] = test.split("Artikel");
         console.log(parseInt(test2[1]));
         // Summe der Preise  
         summe += artikel[parseInt(test2[1])].preis;

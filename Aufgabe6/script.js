@@ -213,7 +213,7 @@ var namespace06;
         newZ.innerHTML = "" + anzahl;
         //zusammenrechnen der presie 
         let test = _event.currentTarget.parentElement.getAttribute("id");
-        let test2 = test.split("artikel");
+        let test2 = test.split("Artikel");
         console.log(parseInt(test2[1]));
         // Summe der Preise  
         summe += artikel[parseInt(test2[1])].preis;
