@@ -182,8 +182,8 @@ var namespace06;
         let newH = document.createElement("h2"); //Name
         newH.innerHTML = artikel[index].name;
         document.getElementById("Artikel" + index)?.appendChild(newH);
-        let newImg = document.createElement("Bild"); //Bild
-        newImg.src = artikel[index].bild;
+        let bild = document.createElement("bild"); //Bild
+        bild.src = artikel[index].bild;
         document.getElementById("Artikel" + index)?.appendChild(bild);
         let newP = document.createElement("p"); //Beschreib.
         newP.innerHTML = artikel[index].beschreibung;
