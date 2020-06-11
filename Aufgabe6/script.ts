@@ -1,7 +1,7 @@
 // intaface fürs erte Kategorie
 namespace namespace06 {
     interface Artikel {
-        
+
         bild: string;
         name: string;
         beschreibung: string;
@@ -214,7 +214,8 @@ namespace namespace06 {
 
 
     // atickel is array geladen 
-    let artikel: Artikel[] = [luiSupJacke, luisupbag, luisupbag, phillipPlainJacket, phillipplainhose, phillipPlainWeste, gcs, offWhite, gucciCap, offWhitePulli, gucciLO, stoneIslandhoddy, stoneisland, nike90offwhite, offWhiteS, airJordanBLUEBLACK, nikebacktofuture, nikebj, airMAG, bts, btsw, yeezyBoost, yeezy, ys, nSup];
+    let artikel: Artikel[] = [luiSupJacke, luisupbag, luisupbag, phillipPlainJacket, phillipplainhose, phillipPlainWeste, gcs, offWhite, gucciCap, offWhitePulli, gucciLO, stoneIslandhoddy, stoneisland];
+    let artikel2: Artikel[] = [nike90offwhite, offWhiteS, airJordanBLUEBLACK, nikebacktofuture, nikebj, airMAG, bts, btsw, yeezyBoost, yeezy, ys, nSup];
     let kategorien: string[] = ["special", "schuhe"];
 
     // schleife zum seite generieren 
@@ -230,7 +231,7 @@ namespace namespace06 {
         document.getElementById("Artikel" + index)?.appendChild(newH);
 
 
-        let bild: HTMLImageElement  = document.createElement("img");     //Bild
+        let bild: HTMLImageElement = document.createElement("img");     //Bild
         bild.src = artikel[index].bild;
         document.getElementById("Artikel" + index)?.appendChild(bild);
 
@@ -246,10 +247,46 @@ namespace namespace06 {
 
 
         let newB: HTMLButtonElement = document.createElement("button"); //Kaufen
-        newB.value = "Kaufen";
+        newB.id = "buySpecial" + index;
+        newB.innerHTML = "Kaufen";
         newB.type = "submit";
         document.getElementById("Artikel" + index)?.appendChild(newB);
         newB.addEventListener("click", kaufen);
+    }
+
+    for (let index: number = 0; index < artikel2.length; index++) {
+
+        let newDiv: HTMLDivElement = document.createElement("div");
+        newDiv.id = "Artikel2" + index;
+        newDiv.setAttribute("class", "box");
+        document.getElementById("Kategorie2")?.appendChild(newDiv);
+
+        let newH: HTMLParagraphElement = document.createElement("h2");    //Name
+        newH.innerHTML = artikel2[index].name;
+        document.getElementById("Artikel2" + index)?.appendChild(newH);
+
+
+        let bild: HTMLImageElement = document.createElement("img");     //Bild
+        bild.src = artikel2[index].bild;
+        document.getElementById("Artikel2" + index)?.appendChild(bild);
+
+
+        let newP: HTMLParagraphElement = document.createElement("p");    //Beschreib.
+        newP.innerHTML = artikel2[index].beschreibung;
+        document.getElementById("Artikel2" + index)?.appendChild(newP);
+
+
+        let newPreis: HTMLParagraphElement = document.createElement("p");    //Preis
+        newPreis.innerHTML = artikel2[index].preis.toFixed(2) + "€";
+        document.getElementById("Artikel2" + index)?.appendChild(newPreis);
+
+
+        let newB: HTMLButtonElement = document.createElement("button"); //Kaufen
+        newB.id = "buyShoes2" + index;
+        newB.innerHTML = "Kaufen";
+        newB.type = "submit";
+        document.getElementById("Artikel2" + index)?.appendChild(newB);
+        newB.addEventListener("click", kaufen2);
     }
 
 
@@ -257,29 +294,44 @@ namespace namespace06 {
     let anzahl: number = 0;
     let summe: number = 0;
 
-    // element für sichtbarkeit der Eingelagerten Produkte
-    let newZ: HTMLDivElement = document.createElement("div");
-    newZ.id = "anz";
 
+
+    // element für sichtbarkeit der Eingelagerten Produkte
+    let cartCounter: HTMLElement = document.getElementById("cart-count");
 
 
     // Funktion fur den Kaufbutton 
     function kaufen(_event: Event): void {
-
-        //einbelenden des Kreises 
-        if (anzahl < 1) {
-            document.getElementById("header")?.appendChild(newZ);
-        }
         anzahl += 1;
-        newZ.innerHTML = "" + anzahl;
+        console.log(anzahl);
+        //Name
+        cartCounter.innerHTML = "" + anzahl;
 
         //zusammenrechnen der presie 
         let test: string = (<HTMLDivElement>(<HTMLElement>_event.currentTarget).parentElement).getAttribute("id")!;
         let test2: string[] = test.split("Artikel");
-        console.log(parseInt(test2[1]));
         // Summe der Preise  
         summe += artikel[parseInt(test2[1])].preis;
+
+
         console.log(summe + "€");
+    }
+
+    function kaufen2(_event: Event): void {
+        anzahl += 1;
+        console.log(anzahl);
+        //Name
+        cartCounter.innerHTML = "" + anzahl;
+
+        //zusammenrechnen der presie 
+        let test: string = (<HTMLDivElement>(<HTMLElement>_event.currentTarget).parentElement).getAttribute("id")!;
+        let test2: string[] = test.split("Artikel2");
+        // Summe der Preise  
+        summe += artikel2[parseInt(test2[1])].preis;
+
+        console.log(summe + "€");
+
+
 
     }
 
@@ -309,26 +361,23 @@ namespace namespace06 {
         switch ((<HTMLAnchorElement>_event.currentTarget).getAttribute("id")) {
             case "a0":
                 //nur Büroanzeigen
-                (<HTMLDivElement>document.getElementById("kategorie1")).style.display = "flex";
-                (<HTMLDivElement>document.getElementById("kategorie2")).style.display = "none";
-                (<HTMLElement>document.getElementById("k1")).style.display = "flex";
-                (<HTMLElement>document.getElementById("k2")).style.display = "none";
+                (<HTMLDivElement>document.getElementById("Kategorie1")).style.display = "grid";
+                (<HTMLDivElement>document.getElementById("Kategorie2")).style.display = "none";
+
                 console.log("Special");
                 break;
             case "a1":
                 //nur Gartenartikel anzeigfen
-                (<HTMLDivElement>document.getElementById("kategorie1")).style.display = "none";
-                (<HTMLDivElement>document.getElementById("kategorie2")).style.display = "flex";
-                (<HTMLElement>document.getElementById("k1")).style.display = "none";
-                (<HTMLElement>document.getElementById("k2")).style.display = "flex";
+                (<HTMLDivElement>document.getElementById("Kategorie1")).style.display = "none";
+                (<HTMLDivElement>document.getElementById("Kategorie2")).style.display = "grid";
+
                 console.log("Shoes");
                 break;
             case "a2":
                 //alles anzeigen
-                (<HTMLDivElement>document.getElementById("kategorie1")).style.display = "flex";
-                (<HTMLDivElement>document.getElementById("kategorie2")).style.display = "flex";
-                (<HTMLElement>document.getElementById("k1")).style.display = "flex";
-                (<HTMLElement>document.getElementById("k2")).style.display = "flex";
+                (<HTMLDivElement>document.getElementById("Kategorie1")).style.display = "grid";
+                (<HTMLDivElement>document.getElementById("Kategorie2")).style.display = "grid";
+
                 console.log("Alle");
                 break;
             default:

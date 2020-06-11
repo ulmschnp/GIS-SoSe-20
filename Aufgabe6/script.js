@@ -171,7 +171,8 @@ var namespace06;
         kategorie: "schuhe"
     };
     // atickel is array geladen 
-    let artikel = [luiSupJacke, luisupbag, luisupbag, phillipPlainJacket, phillipplainhose, phillipPlainWeste, gcs, offWhite, gucciCap, offWhitePulli, gucciLO, stoneIslandhoddy, stoneisland, nike90offwhite, offWhiteS, airJordanBLUEBLACK, nikebacktofuture, nikebj, airMAG, bts, btsw, yeezyBoost, yeezy, ys, nSup];
+    let artikel = [luiSupJacke, luisupbag, luisupbag, phillipPlainJacket, phillipplainhose, phillipPlainWeste, gcs, offWhite, gucciCap, offWhitePulli, gucciLO, stoneIslandhoddy, stoneisland];
+    let artikel2 = [nike90offwhite, offWhiteS, airJordanBLUEBLACK, nikebacktofuture, nikebj, airMAG, bts, btsw, yeezyBoost, yeezy, ys, nSup];
     let kategorien = ["special", "schuhe"];
     // schleife zum seite generieren 
     for (let index = 0; index < artikel.length; index++) {
@@ -192,31 +193,64 @@ var namespace06;
         newPreis.innerHTML = artikel[index].preis.toFixed(2) + "€";
         document.getElementById("Artikel" + index)?.appendChild(newPreis);
         let newB = document.createElement("button"); //Kaufen
-        newB.value = "Kaufen";
+        newB.id = "buySpecial" + index;
+        newB.innerHTML = "Kaufen";
         newB.type = "submit";
         document.getElementById("Artikel" + index)?.appendChild(newB);
         newB.addEventListener("click", kaufen);
+    }
+    for (let index = 0; index < artikel2.length; index++) {
+        let newDiv = document.createElement("div");
+        newDiv.id = "Artikel2" + index;
+        newDiv.setAttribute("class", "box");
+        document.getElementById("Kategorie2")?.appendChild(newDiv);
+        let newH = document.createElement("h2"); //Name
+        newH.innerHTML = artikel2[index].name;
+        document.getElementById("Artikel2" + index)?.appendChild(newH);
+        let bild = document.createElement("img"); //Bild
+        bild.src = artikel2[index].bild;
+        document.getElementById("Artikel2" + index)?.appendChild(bild);
+        let newP = document.createElement("p"); //Beschreib.
+        newP.innerHTML = artikel2[index].beschreibung;
+        document.getElementById("Artikel2" + index)?.appendChild(newP);
+        let newPreis = document.createElement("p"); //Preis
+        newPreis.innerHTML = artikel2[index].preis.toFixed(2) + "€";
+        document.getElementById("Artikel2" + index)?.appendChild(newPreis);
+        let newB = document.createElement("button"); //Kaufen
+        newB.id = "buyShoes2" + index;
+        newB.innerHTML = "Kaufen";
+        newB.type = "submit";
+        document.getElementById("Artikel2" + index)?.appendChild(newB);
+        newB.addEventListener("click", kaufen2);
     }
     // zaehler variable
     let anzahl = 0;
     let summe = 0;
     // element für sichtbarkeit der Eingelagerten Produkte
-    let newZ = document.createElement("div");
-    newZ.id = "anz";
+    let cartCounter = document.getElementById("cart-count");
     // Funktion fur den Kaufbutton 
     function kaufen(_event) {
-        //einbelenden des Kreises 
-        if (anzahl < 1) {
-            document.getElementById("header")?.appendChild(newZ);
-        }
         anzahl += 1;
-        newZ.innerHTML = "" + anzahl;
+        console.log(anzahl);
+        //Name
+        cartCounter.innerHTML = "" + anzahl;
         //zusammenrechnen der presie 
         let test = _event.currentTarget.parentElement.getAttribute("id");
         let test2 = test.split("Artikel");
-        console.log(parseInt(test2[1]));
         // Summe der Preise  
         summe += artikel[parseInt(test2[1])].preis;
+        console.log(summe + "€");
+    }
+    function kaufen2(_event) {
+        anzahl += 1;
+        console.log(anzahl);
+        //Name
+        cartCounter.innerHTML = "" + anzahl;
+        //zusammenrechnen der presie 
+        let test = _event.currentTarget.parentElement.getAttribute("id");
+        let test2 = test.split("Artikel2");
+        // Summe der Preise  
+        summe += artikel2[parseInt(test2[1])].preis;
         console.log(summe + "€");
     }
     // ersellung der navigation
@@ -243,26 +277,20 @@ var namespace06;
         switch (_event.currentTarget.getAttribute("id")) {
             case "a0":
                 //nur Büroanzeigen
-                document.getElementById("kategorie1").style.display = "flex";
-                document.getElementById("kategorie2").style.display = "none";
-                document.getElementById("k1").style.display = "flex";
-                document.getElementById("k2").style.display = "none";
+                document.getElementById("Kategorie1").style.display = "grid";
+                document.getElementById("Kategorie2").style.display = "none";
                 console.log("Special");
                 break;
             case "a1":
                 //nur Gartenartikel anzeigfen
-                document.getElementById("kategorie1").style.display = "none";
-                document.getElementById("kategorie2").style.display = "flex";
-                document.getElementById("k1").style.display = "none";
-                document.getElementById("k2").style.display = "flex";
+                document.getElementById("Kategorie1").style.display = "none";
+                document.getElementById("Kategorie2").style.display = "grid";
                 console.log("Shoes");
                 break;
             case "a2":
                 //alles anzeigen
-                document.getElementById("kategorie1").style.display = "flex";
-                document.getElementById("kategorie2").style.display = "flex";
-                document.getElementById("k1").style.display = "flex";
-                document.getElementById("k2").style.display = "flex";
+                document.getElementById("Kategorie1").style.display = "grid";
+                document.getElementById("Kategorie2").style.display = "grid";
                 console.log("Alle");
                 break;
             default:
