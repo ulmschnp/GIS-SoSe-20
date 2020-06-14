@@ -217,6 +217,7 @@ namespace namespace06 {
     let artikel: Artikel[] = [luiSupJacke, luisupbag, luisupbag, phillipPlainJacket, phillipplainhose, phillipPlainWeste, gcs, offWhite, gucciCap, offWhitePulli, gucciLO, stoneIslandhoddy, stoneisland];
     let artikel2: Artikel[] = [nike90offwhite, offWhiteS, airJordanBLUEBLACK, nikebacktofuture, nikebj, airMAG, bts, btsw, yeezyBoost, yeezy, ys, nSup];
     let kategorien: string[] = ["special", "schuhe"];
+    JSON.stringify(artikel2);
 
     // schleife zum seite generieren 
     for (let index: number = 0; index < artikel.length; index++) {
