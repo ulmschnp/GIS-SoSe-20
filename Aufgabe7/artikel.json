@@ -3,28 +3,28 @@
         "name": "LuisVitton Supreme Jacke",
         "bild": "Bilder/luisupjacke.jpg",
         "beschreibung": "Wer zuerst kommt, der hats verdient",
-        "preis": 13.899,
+        "preis": 13899,
         "kategorie": "1"
     },
     {
         "name": "OffwhitePulli",
         "bild": "Bilder/offWhitepulli.jpg",
         "beschreibung": "Hält warm",
-        "preis": 12.899,
+        "preis": 12899,
         "kategorie": "1"
     },
     {
         "name": "Philip Plain Jacke",
         "bild": "Bilder/phillipplainjacke.jpg",
         "beschreibung": "Hält warm",
-        "preis": 2,
+        "preis": 2000,
         "kategorie": "1"
     },
     {
         "name": "Gucci Cap 2.0",
         "bild": "Bilder/gucciCap.jpg",
         "beschreibung": "Perfekt für den Sommer",
-        "preis": 250.99,
+        "preis": 250,
         "kategorie": "1"
     },
     {
@@ -45,42 +45,42 @@
         "name": "Air Jordan BLUE&BLACK",
         "bild": "Bilder/airJordanblueblack.jpg",
         "beschreibung": "darf es etwas auffälliger werden, dann ist dieser Schuh der Richtige für dich!",
-        "preis": 999.00,
+        "preis": 999,
         "kategorie": "2"
     },
     {
         "name": "Balenciaga TripleS BLACK",
         "bild": "Bilder/balenciagaTripleSblack.jpg",
         "beschreibung": "Die ersten Wochen etwas unbequem, dann aber ein Traum",
-        "preis": 750.99,
+        "preis": 750,
         "kategorie": "2"
     },
     {
         "name": "Nike Nike AirMAG",
         "bild": "Bilder/nikeAirmag.jpg",
         "beschreibung": "Schonmal den Filmklassiker zurück in die Zukunft geschaut?",
-        "preis": 16980.00,
+        "preis": 16980,
         "kategorie": "2"
     },
     {
         "name": "YeezyBOOST350 V2",
         "bild": "Bilder/gucciLO.png",
         "beschreibung": "mind. 2 GucciArtikel",
-        "preis": 1000.00,
+        "preis": 1000,
         "kategorie": "2"
     },
     {
         "name": "Nike Supreme",
         "bild": "Bilder/NIKEsupreme.jpeg",
         "beschreibung": "Gemütliche Schuhe zum billig Preis",
-        "preis": 31415.00,
+        "preis": 31415,
         "kategorie": "2"
     },
     {
         "name": "Nike Ben and Jerrys",
         "bild": "Bilder/nikeBenandJerrys.jpeg",
         "beschreibung": "Schmecken nach Eis",
-        "preis": 2.50,
+        "preis": 250,
         "kategorie": "2"
     }
 ]
