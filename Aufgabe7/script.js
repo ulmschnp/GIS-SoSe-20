@@ -71,7 +71,6 @@ var Aufgabe07;
     let allCategory = document.createElement("a");
     allCategory.id = "all";
     allCategory.innerHTML = "All";
-    console.log("all");
     allCategory.addEventListener("click", handleKategorie);
     document.getElementById("allButton")?.appendChild(allCategory);
     let specialCategory = document.createElement("a");

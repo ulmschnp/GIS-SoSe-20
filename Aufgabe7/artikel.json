@@ -17,14 +17,14 @@
         "name": "Philip Plain Jacke",
         "bild": "Bilder/phillipplainjacke.jpg",
         "beschreibung": "Hält warm",
-        "preis": 2000,
+        "preis": 2,
         "kategorie": "1"
     },
     {
         "name": "Gucci Cap 2.0",
         "bild": "Bilder/gucciCap.jpg",
         "beschreibung": "Perfekt für den Sommer",
-        "preis": 250,
+        "preis": 25099,
         "kategorie": "1"
     },
     {
@@ -45,14 +45,14 @@
         "name": "Air Jordan BLUE&BLACK",
         "bild": "Bilder/airJordanblueblack.jpg",
         "beschreibung": "darf es etwas auffälliger werden, dann ist dieser Schuh der Richtige für dich!",
-        "preis": 999,
+        "preis": 99900,
         "kategorie": "2"
     },
     {
         "name": "Balenciaga TripleS BLACK",
         "bild": "Bilder/balenciagaTripleSblack.jpg",
         "beschreibung": "Die ersten Wochen etwas unbequem, dann aber ein Traum",
-        "preis": 750,
+        "preis": 75099,
         "kategorie": "2"
     },
     {
@@ -80,7 +80,7 @@
         "name": "Nike Ben and Jerrys",
         "bild": "Bilder/nikeBenandJerrys.jpeg",
         "beschreibung": "Schmecken nach Eis",
-        "preis": 250,
+        "preis": 2.50,
         "kategorie": "2"
     }
 ]
