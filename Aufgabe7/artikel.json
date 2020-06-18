@@ -1,84 +1,84 @@
 [
     {
         "name": "LuisVitton Supreme Jacke",
-        "bild": "Bilder/luisupjacke.jpg",
+        "bild": "luisupjacke.jpg",
         "beschreibung": "Wer zuerst kommt, der hats verdient",
         "preis": 13899,
         "kategorie": "1"
     },
     {
         "name": "OffwhitePulli",
-        "bild": "Bilder/offWhitepulli.jpg",
+        "bild": "offWhitepulli.jpg",
         "beschreibung": "Hält warm",
         "preis": 12899,
         "kategorie": "1"
     },
     {
         "name": "Philip Plain Jacke",
-        "bild": "Bilder/phillipplainjacke.jpg",
+        "bild": "phillipplainjacke.jpg",
         "beschreibung": "Hält warm",
         "preis": 2000,
         "kategorie": "1"
     },
     {
         "name": "Gucci Cap 2.0",
-        "bild": "Bilder/gucciCap.jpg",
+        "bild": "gucciCap.jpg",
         "beschreibung": "Perfekt für den Sommer",
         "preis": 250,
         "kategorie": "1"
     },
     {
         "name": "GucciSupreme Jogger",
-        "bild": "Bilder/guccisupjogger.jpg",
+        "bild": "guccisupjogger.jpg",
         "beschreibung": "Nur noch Gucci Bratan",
         "preis": 980,
         "kategorie": "1"
     },
     {
         "name": "LuisVitton Supreme Bag RED",
-        "bild": "Bilder/Louis-Vuitton-Supreme.jpg",
+        "bild": "Louis-Vuitton-Supreme.jpg",
         "beschreibung": "Genug Platz für arme Studenten",
         "preis": 16899,
         "kategorie": "1"
     },
     {
         "name": "Air Jordan BLUE&BLACK",
-        "bild": "Bilder/airJordanblueblack.jpg",
+        "bild": "airJordanblueblack.jpg",
         "beschreibung": "darf es etwas auffälliger werden, dann ist dieser Schuh der Richtige für dich!",
         "preis": 999,
         "kategorie": "2"
     },
     {
         "name": "Balenciaga TripleS BLACK",
-        "bild": "Bilder/balenciagaTripleSblack.jpg",
+        "bild": "balenciagaTripleSblack.jpg",
         "beschreibung": "Die ersten Wochen etwas unbequem, dann aber ein Traum",
         "preis": 750,
         "kategorie": "2"
     },
     {
         "name": "Nike Nike AirMAG",
-        "bild": "Bilder/nikeAirmag.jpg",
+        "bild": "nikeAirmag.jpg",
         "beschreibung": "Schonmal den Filmklassiker zurück in die Zukunft geschaut?",
         "preis": 16980,
         "kategorie": "2"
     },
     {
         "name": "YeezyBOOST350 V2",
-        "bild": "Bilder/gucciLO.png",
+        "bild": "gucciLO.png",
         "beschreibung": "mind. 2 GucciArtikel",
         "preis": 1000,
         "kategorie": "2"
     },
     {
         "name": "Nike Supreme",
-        "bild": "Bilder/NIKEsupreme.jpeg",
+        "bild": "NIKEsupreme.jpeg",
         "beschreibung": "Gemütliche Schuhe zum billig Preis",
         "preis": 31415,
         "kategorie": "2"
     },
     {
         "name": "Nike Ben and Jerrys",
-        "bild": "Bilder/nikeBenandJerrys.jpeg",
+        "bild": "nikeBenandJerrys.jpeg",
         "beschreibung": "Schmecken nach Eis",
         "preis": 250,
         "kategorie": "2"
