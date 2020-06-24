@@ -1,20 +1,18 @@
 "use strict";
 var Aufgabe08;
 (function (Aufgabe08) {
-    let submitBut = document.getElementById("submitBut");
-    submitBut.addEventListener("click", communicate);
-    async function communicate() {
+    document.getElementById("buttonID")?.addEventListener("click", handleButton);
+    function handleButton() {
         let formData = new FormData(document.forms[0]);
-        let url = "";
-        // tslint:disable-next-line: no-any
+        let url = "https://gissose2020-danielmeisler.herokuapp.com/";
         let query = new URLSearchParams(formData);
         url = url + "?" + query.toString();
-        await fetch(url);
-        for (let entry of query) {
-            console.log(entry);
-            console.log("name: " + entry[0]);
-            console.log("value: " + entry[1]);
-        }
+        communicate(url);
+    }
+    async function communicate(_url) {
+        let response = await fetch(_url, { method: "get" });
+        let response2 = await response.text();
+        console.log(response2);
     }
 })(Aufgabe08 || (Aufgabe08 = {}));
 //# sourceMappingURL=script.js.map

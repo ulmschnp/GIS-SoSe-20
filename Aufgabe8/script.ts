@@ -1,21 +1,20 @@
+
 namespace Aufgabe08 {
 
-    let submitBut: HTMLButtonElement = <HTMLButtonElement>document.getElementById("submitBut");
-    submitBut.addEventListener("click", communicate);
+    document.getElementById("buttonID")?.addEventListener("click", handleButton);
 
-    async function communicate(): Promise<void> {
-
+    function handleButton(): void {
         let formData: FormData = new FormData(document.forms[0]);
-        let url: string = "";
-        // tslint:disable-next-line: no-any
-        let query: URLSearchParams = new URLSearchParams(<any>formData);
+        let url: string = "https://gissose2020-danielmeisler.herokuapp.com/";
+        let query: URLSearchParams = new URLSearchParams(<any> formData);
         url = url + "?" + query.toString();
-        await fetch(url);
+        communicate(url);
+    } 
 
-        for (let entry of query) {
-            console.log(entry);
-            console.log("name: " + entry[0]);
-            console.log("value: " + entry[1]);
-        }
-    }
+    async function communicate(_url: RequestInfo): Promise<void> {
+        let response: Response = await fetch(_url, { method: "get" });
+        let response2: String = await response.text();
+        console.log(response2);
+      }
+
 }
