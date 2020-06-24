@@ -1,10 +1,10 @@
 "use strict";
 var Aufgabe08;
 (function (Aufgabe08) {
-    document.getElementById("buttonID")?.addEventListener("click", handleButton);
+    document.getElementById("submitBut")?.addEventListener("click", handleButton);
     function handleButton() {
         let formData = new FormData(document.forms[0]);
-        let url = "https://gissose2020-danielmeisler.herokuapp.com/";
+        let url = "https://pirripirri.herokuapp.com/";
         let query = new URLSearchParams(formData);
         url = url + "?" + query.toString();
         communicate(url);

@@ -1,11 +1,11 @@
 
 namespace Aufgabe08 {
 
-    document.getElementById("buttonID")?.addEventListener("click", handleButton);
+    document.getElementById("submitBut")?.addEventListener("click", handleButton);
 
     function handleButton(): void {
         let formData: FormData = new FormData(document.forms[0]);
-        let url: string = "https://gissose2020-danielmeisler.herokuapp.com/";
+        let url: string = "https://pirripirri.herokuapp.com/";
         let query: URLSearchParams = new URLSearchParams(<any> formData);
         url = url + "?" + query.toString();
         communicate(url);
