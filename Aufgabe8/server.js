@@ -1,17 +1,17 @@
 "use strict";
-exports.__esModule = true;
+Object.defineProperty(exports, "__esModule", { value: true });
 exports.A08Server = void 0;
-var Http = require("http");
+const Http = require("http");
 var A08Server;
 (function (A08Server) {
     console.log("Starting server");
     //Port wird zugewiesen
-    var port = Number(process.env.PORT);
+    let port = Number(process.env.PORT);
     //Port wird überprüft
     if (!port)
         port = 8100;
     //Server variablen erstellun
-    var server = Http.createServer();
+    let server = Http.createServer();
     //Hinzufügen der request handler
     server.addListener("request", handleRequest);
     server.addListener("listening", handleListen);
@@ -31,3 +31,4 @@ var A08Server;
         _response.end();
     }
 })(A08Server = exports.A08Server || (exports.A08Server = {}));
+//# sourceMappingURL=server.js.map

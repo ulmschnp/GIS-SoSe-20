@@ -174,6 +174,7 @@ var namespace06;
     let artikel = [luiSupJacke, luisupbag, luisupbag, phillipPlainJacket, phillipplainhose, phillipPlainWeste, gcs, offWhite, gucciCap, offWhitePulli, gucciLO, stoneIslandhoddy, stoneisland];
     let artikel2 = [nike90offwhite, offWhiteS, airJordanBLUEBLACK, nikebacktofuture, nikebj, airMAG, bts, btsw, yeezyBoost, yeezy, ys, nSup];
     let kategorien = ["special", "schuhe"];
+    JSON.stringify(artikel2);
     // schleife zum seite generieren 
     for (let index = 0; index < artikel.length; index++) {
         let newDiv = document.createElement("div");
