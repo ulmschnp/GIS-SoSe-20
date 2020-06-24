@@ -1,34 +1,41 @@
+
 import * as Http from "http";
 
 export namespace A08Server {
+  //Konsolen Ausgabe, dass der Server startet.
+  console.log("Starting server"); 
+  //Port wird als Variable typ number gespeichert.
+  let port: number = Number(process.env.PORT);
+  //Wenn es keinen Port gibt, dann setzt er ihn auf 8100.
+  if (!port)
+    port = 8100;
 
-    console.log("Starting server");
-    //Port wird zugewiesen
-    let port: number = Number(process.env.PORT);
-    //Port wird überprüft
-    if (!port)
-        port = 8100;
-    //Server variablen erstellun
-    let server: Http.Server = Http.createServer();
-    //Hinzufügen der request handler
-    server.addListener("request", handleRequest);
-    server.addListener("listening", handleListen);
-    //Server "hört" auf port, für Anfragen
-    server.listen(port);
+  //Server wird als Variable typ Http.Server gespeichert.
+  let server: Http.Server = Http.createServer();
+  //Handler werden dem Server als Listener hinzugefügt.
+  server.addListener("request", handleRequest);
+  server.addListener("listening", handleListen);
+  //Server hört den Port ab.
+  server.listen(port);
 
-    function handleListen(): void {
-        console.log("Listening");
-    }
+  //Konsole gibt beim Aufruf "Listening" aus.
+  function handleListen(): void {
+    console.log("Listening");
+  }
 
-    function handleRequest(_request: Http.IncomingMessage, _response: Http.ServerResponse): void {
+  function handleRequest(_request: Http.IncomingMessage, _response: Http.ServerResponse): void {
+    //Konsole gibt beim Aufruf "I hear voices!" aus.
+    console.log("I hear voices!");
 
-        console.log("I hear voices!");
-        //Parameter Reponse-Header
-        _response.setHeader("content-type", "text/html; charset=utf-8");
-        _response.setHeader("Access-Control-Allow-Origin", "*");
-        //Ausgabe URL
-        _response.write(_request.url);
-        //Reponse Ende
-        _response.end();
-    }
+    //Parameter werden für die Response festgelegt.
+    _response.setHeader("content-type", "text/html; charset=utf-8");
+    _response.setHeader("Access-Control-Allow-Origin", "*");
+
+    //URL wird ausgegeben.
+    _response.write(_request.url);
+    console.log(_request.url);
+
+    //Response wird beendet.
+    _response.end();
+  }
 }
